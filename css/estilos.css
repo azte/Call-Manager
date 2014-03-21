@@ -1,0 +1,149 @@
+body{
+
+	background: #F2F2F2;
+	
+	font-family: Arial;
+
+
+}
+
+
+.button {
+  
+ opacity: 0.7;
+ width:100px;
+ height:50px;
+ border:none;
+ margin: 10px 10px;
+ font-size: 20px;
+ background: #3D9BFF;
+ border-radius: 2px;
+ cursor:pointer;
+
+ 
+   }
+.button:hover {
+  
+   
+   text-decoration: none;
+   }
+
+.button:active {
+
+   text-decoration: none;
+
+   }
+
+#captura{
+
+	margin-top: 30px;
+
+
+
+}
+
+#contenido{
+	border: solid 5px white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+h1{
+	font-size: 18px;
+	text-align: center;
+}
+header{
+
+	margin-bottom: 20px;
+	width:1200px;
+}
+
+figure{
+
+	
+	display: inline-block;
+	height: 80px;
+	margin:0;
+	vertical-align: top; 
+	width: 80px;
+
+}
+
+figure img{
+   width:80px;
+}
+
+form{
+
+
+}
+
+#nombres{
+	
+	display: inline-block;
+	height: 80px;
+	margin: 0;
+	vertical-align: top; 
+	width:600px;
+
+}
+
+#reportes{
+
+   
+   
+   margin: 0 auto;
+   width: 900px;
+
+}
+
+section{
+	
+	
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 1200px;
+}
+
+span{
+   display: block;
+   margin: 20px 0 20px 0;
+}
+
+#t_consulta{
+
+	border-collapse:collapse;
+		background:#F2F2F2;
+		border-left:1px solid #686868;
+		border-right:1px solid #686868;
+		font:0.8em/145% 'Trebuchet MS',helvetica,arial,verdana;
+		color: #333;
+		margin: 0 auto;
+
+
+}
+
+.t_datos{
+
+
+   background: #D9D9D9;
+   border-radius: 5px;
+   padding: 10px;
+   height: 80px;
+
+}
+
+.t_reportes{
+   
+   
+   background: #D9D9D9;
+   border-radius: 5px;
+   padding: 10px;
+   width: 1200px;
+
+}
+
+
+td.t_encabezado{
+	
+}

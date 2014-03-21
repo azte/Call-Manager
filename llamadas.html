@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta cahrset="utf-8">
+	<title>CAPTURA DE LLAMADAS</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+
+<header>
+	<h1>Captura de llamadas</h1>
+	<figure>
+		<img src="">
+	</figure>
+	<div id="nombres">
+		<table border="1">
+			<tr>
+				<td>Fecha:</td><td><input id="date" type="text"></td>
+			</tr>
+			<tr>
+				<td>Nombre del Agente:</td><td><input type="text"></td>
+			</tr>
+			</tr>
+		</table>
+	</div>
+</header>
+
+<?php
+// Conectando, seleccionando la base de datos
+$link = mysql_connect('localhost', 'root', '')
+    or die('No se pudo conectar: ' . mysql_error());
+
+mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos');
+
+// Realizar una consulta MySQL
+$query = 'SELECT usuario from reportes';
+$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
+
+// Imprimir los resultados en HTML
+echo "<table>\n";
+while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+    echo "\t<tr>\n";
+    foreach ($line as $col_value) {
+        echo "\t\t<td>$col_value</td>\n";
+    }
+    echo "\t</tr>\n";
+}
+echo "</table>\n";
+
+// Liberar resultados
+mysql_free_result($result);
+
+// Cerrar la conexión
+mysql_close($link);
+?>
+<!-- SCRIPT AÑADIR FECHA FORMATO MYSQL YYYY-MM-DD -->
+
+<script type="text/javascript">
+
+	var f = new Date();
+	document.getElementById('date').value=f.getFullYear()+"-"+f.getMonth()+"-"+f.getDate();
+
+
+</script>
+
+<section>
+
+	<form name="captura">
+		<table border="1">
+			<tr>
+
+				<td class="t_encabezado">Usuario</td>
+				<td class="t_encabezado" size="50">Tienda/Depto/Corp</td>
+				<td class="t_encabezado">Comentarios</td>
+				<td class="t_encabezado">Tipo de Llamada</td>
+				<td class="t_encabezado">Subtipo</td>
+				<td rowspan="2" class="t_encabezado"><input class="button" type="button" value="Guardar"></td>	
+
+			</tr>
+			<tr>
+
+				<td class="t_encabezado"><input type="text"></td>	
+				<td class="t_encabezado"><input type="text"></td>	
+				<td class="t_encabezado"><textarea rows="1" cols="50"></textarea></td>
+				<td class="t_encabezado">
+					<select name="tipo" id="tipo" onchange="cambia_subtipo()">
+						<option value="0" selected>Seleccione</option>
+						<option value="1">Seguimiento</option>
+						<option value="2">Abandonada</option>
+						<option value="3">Cortada</option>
+						<option value="4">Informes</option>
+						<option value="5">Transferencia</option>
+						<option value="6">Ticket Informativo</option>
+						<option value="7">Incidente</option>
+						<option value="8">Requerimiento</option>
+
+
+
+					</select>
+				</td>	
+
+				<td class="t_encabezado"> 
+					<select name="subtipo">
+						<option value="-">Seleccione Informes</option>
+
+
+					</select>
+				</td>
+
+			</tr>
+
+
+
+		</table>
+	</form>
+</section>
+
+<!--SCRIPT MANIPULAR TIPO Y SUBTIPO DE LLAMADAS-->
+
+<script type="text/javascript">	
+
+	var subtipo_4=new Array("-","Promociones","Extension","Error Operativo","Consityf","Recibo","Internet Explorer","Corte","IDI","Arqueo","Inc. Gral. Recibo","Inc. Gral. Recargas","Inc Gral. J&P","TDC/TDD","Venezia POS","SIPOS","IVA","Hoja de Costeo","Orden de Surtimiento","Otros")
+
+
+
+	function cambia_subtipo()
+		{
+
+
+			var tipollamada; //Obteniendo el valor del Select
+			tipollamada=document.captura.tipo[document.captura.tipo.selectedIndex].value;
+				if(tipollamada==4)
+
+					{
+						//Si el valor existe y es igual a 4 se ejecuta lo siguiente
+						mis_tipos=subtipo_4 //Obtiene el arreglo con los subtipos
+						num_tipos = mis_tipos.length //Mide la longitud del arreglo subtipo_4
+						document.captura.subtipo.length=num_tipos //Asignamos el numero de subtipos que contiene el select
+
+							for(i=0;i<num_tipos;i++)
+								{
+
+							/* Por cada subtipo de llamada que existe, el ciclo va crear un option dentro
+							del select SUBTIPO que creamos*/
+
+									document.captura.subtipo.options[i].value=mis_tipos[i]
+									document.captura.subtipo.options[i].text=mis_tipos[i]
+
+								}
+
+					}
+					else //Si la variable tipollamada no es 4, va escribir que no existen subtipos
+							{
+									document.captura.subtipo.length=1
+									document.captura.subtipo.options[0].value="0"
+									document.captura.subtipo.options[0].text="Sin Subtipo"
+							}
+
+
+
+
+				document.captura.subtipo.options[0].selected= true	
+		}
+
+
+
+
+</script>
+
+
+
+
+</body>	
+</html>	
