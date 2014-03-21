@@ -22,7 +22,7 @@
 <body>
 <div id="contenido">
 <header>
-	<h1>Captura de llamadas</h1>
+	<h1>CAPTURA DE LLAMADAS</h1>
 	<figure>
 		<img src="images/logo_tiba.jpg">
 	</figure>
