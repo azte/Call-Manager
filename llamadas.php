@@ -54,7 +54,7 @@
 	?>
 
 	<form method="POST">
-	<input type="submit" id="cerrar_sesion" name="CerrarSesion" value="Salir">
+	<input type="submit" id="cerrar_sesion" name="CerrarSesion" value="SALIR">
 	<form>
 
 
