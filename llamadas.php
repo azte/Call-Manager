@@ -1,3 +1,15 @@
+
+<?php
+	error_reporting(5);
+	include_once "conexion.php";
+	session_start();
+	if(!isset($_SESSION['usuarioactual']))
+		{
+			header('location:login.php');
+		}
+	
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -127,6 +139,12 @@
 	</form>
 </section>
 
+<?php
+
+$user="Carlos";
+echo $user;
+
+?>
 <!--SCRIPT MANIPULAR TIPO Y SUBTIPO DE LLAMADAS-->
 </div>
 </body>	

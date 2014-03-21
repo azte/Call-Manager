@@ -1,8 +1,8 @@
 body{
 
 	background: #F2F2F2;
-	
 	font-family: Arial;
+	color:#585858;
 
 
 }
@@ -11,13 +11,14 @@ body{
 .button {
   
  opacity: 0.7;
- width:100px;
- height:50px;
+ width:90px;
+ height:35px;
  border:none;
+ color:white;
  margin: 10px 10px;
- font-size: 20px;
- background: #3D9BFF;
- border-radius: 2px;
+ font-size: 18px;
+ background: #FF8000;
+ border-radius: 5px;
  cursor:pointer;
 
  
@@ -43,7 +44,7 @@ body{
 }
 
 #contenido{
-	border: solid 5px white;
+	border: solid 3px white;
 	border-radius: 10px;
 	padding: 10px;
 }

@@ -13,7 +13,7 @@ or die('No se pudo conectar: ' . mysql_error());
 mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); 
 
 $fecha=date("y/m/d");
-$query = "INSERT INTO reportes(idr,usuario,tienda,comentarios,tipo,subtipo,fecha) values(null,'$_POST[usuario]','$_POST[tienda]',
+$query = "INSERT INTO reportes(usuario,tienda,comentarios,tipo,subtipo,fecha) values('$_POST[usuario]','$_POST[tienda]',
 	'$_POST[comentarios]','$_POST[tipo]','$_POST[subtipo]','$fecha')";
 $result = mysql_query($query);
 
@@ -25,7 +25,7 @@ exit();
 
 }else {
 
-	echo "<font color='RED'>DATOS INSERTADOS CORRECTAMENTE";
+	
 
 }
 
@@ -34,7 +34,7 @@ exit();
 <script type="text/javascript">
 
 	
-alert("Reporte Registrado")
-window.location="http://localhost/issste/llamadas.php"
+alert("REPORTE REGISTRADO CORRECTAMENTE")
+window.location="http://localhost/call-manager/llamadas.php"
 
 </script>
