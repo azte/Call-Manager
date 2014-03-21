@@ -37,6 +37,28 @@
 			</tr>
 		</table>
 	</div>
+	<div id="login">
+		<?php
+	
+	include_once "conexion.php";
+	session_start();
+	echo "Bienvenido ".$_SESSION["usuarioactual"].", dios te bendiga";
+	 if ($_POST['CerrarSesion']) 
+		{
+		session_destroy();
+
+    //Y redirecciona
+   		 header("Location:login.php"); 
+		}
+
+	?>
+
+	<form method="POST">
+	<input type="submit" id="cerrar_sesion" name="CerrarSesion" value="Salir">
+	<form>
+
+
+	</div>	
 </header>
 <!------------------SECCIÓN QUE MUESTRA LOS REPORTES DE BASE DE DATOS-------------->	
 	<div id="reportes">
@@ -139,12 +161,7 @@
 	</form>
 </section>
 
-<?php
 
-$user="Carlos";
-echo $user;
-
-?>
 <!--SCRIPT MANIPULAR TIPO Y SUBTIPO DE LLAMADAS-->
 </div>
 </body>	

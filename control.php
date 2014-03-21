@@ -27,7 +27,8 @@
                //Guardamos dos variables de sesión que nos auxiliará para saber si se está o no "logueado" un usuario
                $_SESSION["autentica"] = "SIP";
                $_SESSION["usuarioactual"] = mysql_result($myclave,0,0); //nombre del usuario logueado.
-			   $_SESSION["tipo"] = tipo_usuario($_POST["usuario"]); // Buscamos que tipo es.
+			   $_SESSION["tipo"] = tipo_usuario($_POST["usuario"]);
+			    // Buscamos que tipo es.
 			   
 						if($_SESSION['tipo']="1")
 								header("location:llamadas.php");

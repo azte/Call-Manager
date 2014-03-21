@@ -43,6 +43,21 @@ body{
 
 }
 
+#cerrar_sesion{
+
+
+ width:100px;
+ height:20px;
+ border:none;
+ color:white;
+ font-size: 15px;
+ background:red;
+ border-radius: 5px;
+ cursor:pointer;
+ float: right;
+
+}
+
 #contenido{
 	border: solid 3px white;
 	border-radius: 10px;
@@ -76,6 +91,14 @@ figure img{
 
 form{
 
+
+}
+
+#login{
+
+	
+	display: inline-block;
+	float: right;
 
 }
 
