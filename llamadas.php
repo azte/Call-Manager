@@ -38,6 +38,7 @@
 		</table>
 	</div>
 	<div id="login">
+		
 		<?php
 	
 	include_once "conexion.php";
@@ -51,11 +52,11 @@
    		 header("Location:login.php"); 
 		}
 
-	?>
+		?>
 
-	<form method="POST">
+	<form name="cerrar" method="POST">
 	<input type="submit" id="cerrar_sesion" name="CerrarSesion" value="SALIR">
-	<form>
+	</form>
 
 
 	</div>	
