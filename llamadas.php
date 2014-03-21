@@ -81,6 +81,9 @@
 
 		echo "<table id=t_consulta border=1>\n";
 		echo "<tr><td>ID</td><td>Usuario</td><td>Tienda</td><td>comentarios</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
+			
+		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD
+
 			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
    				 echo "\t<tr>\n";
     	foreach ($line as $col_value) {
