@@ -18,7 +18,7 @@
 	<title>CAPTURA DE LLAMADAS</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script src="scripts/f_subtipos.js" language="javascript" type="text/javascript"></script>
-</head>
+	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
 <body>
 <div id="contenido">
 <header>
@@ -113,7 +113,7 @@
 
 <section>
 <!--****************FORMULARIO DE CAPTURA****************-->
-	<form action="genera_r.php" method="post" name="captura">
+	<form action="genera_r.php" method="post" onsubmit="return valida()" name="captura">
 		<table class="t_reportes">
 			<tr>
 
@@ -126,10 +126,11 @@
 					<input class="button" type="submit" name="ok" id="ok"value="Guardar">
 				</td>	
 
+
 			</tr>
 			<tr>
 
-				<td class="t_encabezado"><input name="usuario" type="text"></td>	
+				<td class="t_encabezado"><input id="usuario" name="usuario" type="text"></td>	
 				<td class="t_encabezado"><input name="tienda" type="text"></td>	
 				<td class="t_encabezado"><textarea name="comentarios" rows="1" cols="50"></textarea></td>
 				<td class="t_encabezado">
