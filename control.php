@@ -17,7 +17,7 @@
           $sql = "SELECT Nombre
                FROM usuarios
                WHERE nombre = '".htmlentities($_POST["usuario"])."' 
-               and password = '".htmlentities($_POST["clave"])."'";
+               and password = '".md5(htmlentities($_POST[("clave")]))."'";
           $myclave = mysql_query($sql,$link);
           $nmyclave = mysql_num_rows($myclave);
 

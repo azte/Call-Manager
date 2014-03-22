@@ -11,7 +11,7 @@
 
 		<form action="control.php" method="post" name="login">
 			<input name="usuario" type="text" placeholder="Usuario">
-			<input name="clave" type="text" placeholder="Contraseña">
+			<input name="clave" type="password" placeholder="Contraseña">
 			<input type="submit" value="Ingresar">
 		</form>
 	</div>
