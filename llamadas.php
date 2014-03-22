@@ -74,13 +74,13 @@
 		mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); //BD PRUEBAS
 
 // Realizar una consulta MySQL
-		$query = 'SELECT idr,usuario,tienda,comentarios,tipo,subtipo,fecha from reportes'; //TABLA SELECCIONADA Y QUERY
+		$query = "SELECT idr,usuario,tienda,comentarios,reportes.tipo,subtipo,fecha from reportes,usuarios where idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY
 		$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
 // Imprimir los resultados en HTML
 
 		echo "<table id=t_consulta border=1>\n";
-		echo "<tr><td>ID</td><td>Usuario</td><td>Tienda</td><td>comentarios</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
+		echo "<tr><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>comentarios</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
 			
 		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD
 
