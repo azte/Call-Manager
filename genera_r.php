@@ -18,9 +18,10 @@ $idr=mysql_query($consulta);
 $resEmp = mysql_fetch_assoc($idr);
    //echo $resEmp['idu']."<br>";
 
+date_default_timezone_set("America/Mexico_City");
 $fecha=date("y/m/d");
-$query = "INSERT INTO reportes(id_u,usuario,tienda,comentarios,tipo,subtipo,fecha) values('$resEmp[idu]','$_POST[usuario]','$_POST[tienda]',
-	'$_POST[comentarios]','$_POST[tipo]','$_POST[subtipo]','$fecha')";
+$query = "INSERT INTO reportes(id_u,usuario,tienda,comentarios,ticket,tipo,subtipo,fecha) values('$resEmp[idu]','$_POST[usuario]','$_POST[tienda]',
+	'$_POST[comentarios]','$_POST[ticket]','$_POST[tipo]','$_POST[subtipo]','$fecha')";
 $result = mysql_query($query);
 
 if (! $result){
@@ -41,7 +42,7 @@ exit();
 	
 		
 	alert("REPORTE REGISTRADO CORRECTAMENTE")
-	window.location="http://localhost/call-manager/llamadas.php"
+	window.location="http://192.163.161.137/call-manager/llamadas.php"
 	
 	</script>
 

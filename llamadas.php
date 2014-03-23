@@ -43,7 +43,7 @@
 	
 	include_once "conexion.php";
 	session_start();
-	echo "Bienvenido ".$_SESSION["usuarioactual"].", dios te bendiga";
+	echo "Bienvenido ".$_SESSION["usuarioactual"];
 	 if ($_POST['CerrarSesion']) 
 		{
 		session_destroy();
@@ -74,13 +74,13 @@
 		mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); //BD PRUEBAS
 
 // Realizar una consulta MySQL
-		$query = "SELECT idr,usuario,tienda,comentarios,reportes.tipo,subtipo,fecha from reportes,usuarios where idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY
+		$query = "SELECT idr,usuario,tienda,comentarios,ticket,reportes.tipo,subtipo,fecha from reportes,usuarios where fecha=curdate() and idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY
 		$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
 // Imprimir los resultados en HTML
 
 		echo "<table id=t_consulta border=1>\n";
-		echo "<tr><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>comentarios</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
+		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
 			
 		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD
 
@@ -120,6 +120,7 @@
 				<td class="t_encabezado">Usuario</td>
 				<td class="t_encabezado" size="50">Tienda/Depto/Corp</td>
 				<td class="t_encabezado">Comentarios</td>
+				<td class="t_encabezado">Ticket</td> <!--ENCABEZADO DE TICKET-->
 				<td class="t_encabezado">Tipo de Llamada</td>
 				<td class="t_encabezado">Subtipo</td>
 				<td rowspan="2" class="t_encabezado">
@@ -131,8 +132,9 @@
 			<tr>
 
 				<td class="t_encabezado"><input id="usuario" name="usuario" type="text"></td>	
-				<td class="t_encabezado"><input name="tienda" type="text"></td>	
-				<td class="t_encabezado"><textarea name="comentarios" rows="1" cols="50"></textarea></td>
+				<td class="t_encabezado"><input name="tienda" type="text"></td>
+				<td class="t_encabezado"><textarea name="comentarios" rows="1" cols="20"></textarea></td>
+				<td class="t_encabezado"><input id="ticket" name="ticket" type="text"></td>	
 				<td class="t_encabezado">
 					<select name="tipo" id="tipo" onchange="cambia_subtipo()">
 						<option value="Seleccione" selected>Seleccione</option>
@@ -151,11 +153,12 @@
 				</td>	
 
 				<td class="t_encabezado"> 
-					<select name="subtipo">
-						<option value="-">-</option>
+					<select id="informes" name="subtipo">
+						<option  value="-">-</option>
 
 
 					</select>
+
 				</td>
 
 			</tr>
