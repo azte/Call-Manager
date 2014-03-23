@@ -27,16 +27,23 @@
 		<img src="images/logo_tiba.jpg">
 	</figure>
 	<div id="nombres">
+
+	
+
+	
 		<table class="t_datos">
 			<tr>
 				<td>Fecha:</td><td><input id="date" type="text"></td>
 			</tr>
 			<tr>
-				<td>Nombre del Agente:</td><td><input type="text"></td>
+				<td>Nombre del Agente:</td><td><input value="<?php echo $_SESSION[usuarioactual]?>" type="text"></td>
 			</tr>
 			</tr>
 		</table>
 	</div>
+
+
+	
 	<div id="login">
 		
 		<?php
@@ -131,8 +138,8 @@
 			</tr>
 			<tr>
 
-				<td class="t_encabezado"><input id="usuario" name="usuario" type="text"></td>	
-				<td class="t_encabezado"><input name="tienda" type="text"></td>
+				<td class="t_encabezado"><input id="usuario" placeholder="Nombre"name="usuario" type="text"></td>	
+				<td class="t_encabezado"><input name="tienda" placeholder="Tienda" type="text"></td>
 				<td class="t_encabezado"><textarea name="comentarios" rows="1" cols="20"></textarea></td>
 				<td class="t_encabezado"><input id="ticket" name="ticket" type="text"></td>	
 				<td class="t_encabezado">
