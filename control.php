@@ -42,7 +42,7 @@
                window.location.href=\"login.php\"</script>"; 
           }
      }else{
-          echo"<script>alert('El usuario no existe.');window.location.href=\"index.php\"</script>";
+          echo"<script>alert('El usuario no existe.');window.location.href=\"login.php\"</script>";
      }
 	 
 	 function tipo_usuario($user)

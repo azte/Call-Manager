@@ -9,21 +9,30 @@
 <body>
 	
 
+	
+<div id="all">
+
+
 	<h1>Control de Llamadas</h1>
-	<figure>
-		<img src="">
+	<figure id="logo_tiba">
+		<img src="images/logo_tiba.jpg">
 	</figure>
+	<figure id="logo_issste">
+		<img src="images/logo_issste.jpg">
+	</figure>
+	
 
 	<div id="contenido">
 		
-		<h2>Login</h2>
+		<h2>LOGIN</h2>
 
-		<form action="control.php" method="post" name="login">
+		<form action="control.php" id="login_formulario" method="post" name="login">
 			<input name="usuario" type="text"class="inputs" placeholder="Usuario">
 			<input name="clave" type="password" class="inputs" placeholder="Contraseña">
-			<input type="submit" id="log_button" value="Ingresar">
+			<input class="button" type="submit" id="log_button" value="Ingresar">
 		</form>
 	</div>
+</div>	
 </body>
 
 

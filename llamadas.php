@@ -50,7 +50,7 @@
 	
 	include_once "conexion.php";
 	session_start();
-	echo "Bienvenido ".$_SESSION["usuarioactual"];
+	echo "Bienvenido ".$_SESSION["usuarioactual"].", dios te bendiga";
 	 if ($_POST['CerrarSesion']) 
 		{
 		session_destroy();
@@ -139,7 +139,7 @@
 			<tr>
 
 				<td class="t_encabezado"><input id="usuario" placeholder="Nombre"name="usuario" type="text"></td>	
-				<td class="t_encabezado"><input name="tienda" placeholder="Tienda" type="text"></td>
+				<td class="t_encabezado"><input id="tienda" name="tienda" placeholder="Tienda" type="text"></td>
 				<td class="t_encabezado"><textarea name="comentarios" rows="1" cols="20"></textarea></td>
 				<td class="t_encabezado"><input id="ticket" name="ticket" type="text"></td>	
 				<td class="t_encabezado">

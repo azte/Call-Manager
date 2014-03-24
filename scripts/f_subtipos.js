@@ -1,4 +1,4 @@
-var subtipo_4=new Array("-","Promociones","Recargas (montos, referencias, etc)","Extension","Error Operativo","Consityf","Recibo","Internet Explorer","Corte","IDI","Arqueo","Inc. Gral. Recibo","Inc. Gral. Recargas","Inc Gral. J&P","TDC/TDD","Venezia POS","SIPOS","IVA","Hoja de Costeo","Orden de Surtimiento","Otros")
+var subtipo_4=new Array("Promociones","Recargas (montos, referencias, etc)","Extension","Error Operativo","Consityf","Recibo","Internet Explorer","Corte","IDI","Arqueo","Inc. Gral. Recibo","Inc. Gral. Recargas","Inc Gral. J&P","TDC/TDD","Venezia POS","SIPOS","IVA","Hoja de Costeo","Orden de Surtimiento","Otros")
 
 
 

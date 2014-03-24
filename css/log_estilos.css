@@ -1,15 +1,63 @@
+#all{
+
+
+	background: white;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	width: 420px;
+}
+
 body{
 
+	background: #585858;
+	color:#585858;
 	font-family: arial;
+
+
 }
+
+.button {
+  
+ opacity: 0.7;
+ width:70px;
+ height:30px;
+ border:none;
+ color:white;
+ margin-left: 10px;
+ font-size: 15px;
+ background: #FF8000;
+ border-radius: 5px;
+ cursor:pointer;
+
+ 
+   }
+.button:hover {
+  
+   
+   text-decoration: none;
+   }
+
+.button:active {
+
+   text-decoration: none;
+
+   }
 
 
 #contenido{
-	border: solid red;
-	display: inline-block;
+	background: #F2F2F2;
+
+	border-radius: 10px;
+	border-width:1px;
+	height: 90px;
+	margin-top: 10px;
+	padding: 3px;
 	vertical-align: top;
-	width: 400px;
-	height: 150px;
+	width: 413px;
+
+	
 
 	
 
@@ -17,28 +65,68 @@ body{
 
 .inputs{
 
-	width: 150px;
+
+	font-size: 15px;
 	height: 20px;
-	font-size: 18px;
-}
-
-figure{
-	border: solid orange;
-	display: inline-block;
-	
-	height: 150px;
-	margin: 0;
-	vertical-align: top;
+	margin: 0 auto;
 	width: 150px;
-
-
+	
 }
+
+
 
 h1{
-	font-size: 30px;
-	margin: 0;
+	
+	color: ;
+	font-size: 20px;
+	height: 30px;
+	margin: 10px auto;
+	text-align: center;
+	vertical-align: center;
+	width: 413px;
+	
+	
 }
 
 h2{
-	margin: 0 0 10px 0;
+	
+	font-size: 15px;
+	margin: 10px 0 10px 0;
+	text-align: center;
+
+}
+
+#login_formulario{
+
+	
+	margin: 0 auto;
+	width: 400px;
+}
+
+
+#logo_tiba,#logo_issste{
+
+	
+	display: inline-block;
+	height: 150px;
+	margin: 0;
+	width: 200px;
+
+}
+
+
+#logo_tiba img{
+
+	width: 200px;
+	height: 150px;
+	display: inline-block;
+
+
+}
+
+#logo_issste img{
+
+	width: 215px;
+	height: 150px;
+
 }
