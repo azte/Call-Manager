@@ -19,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<script src="scripts/f_subtipos.js" language="javascript" type="text/javascript"></script>
 	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
+	<link rel="icon" type="image/png" href="images/favicon.ico" />
 <body>
 <style type="text/css">
  body{background-image:url('images/background.jpg');
@@ -91,7 +92,7 @@
 
 // Imprimir los resultados en HTML
 
-		echo "<table id=t_consulta border=1>\n";
+		echo "<table id=t_consulta>\n";
 		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
 			
 		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD

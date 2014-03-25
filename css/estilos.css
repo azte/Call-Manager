@@ -169,13 +169,29 @@ span{
 
 #t_consulta{
 
-	border-collapse:collapse;
 		background:#F2F2F2;
-		border-left:1px solid #686868;
-		border-right:1px solid #686868;
+
+		border-collapse:collapse;
+		color: #333;
 		font:0.8em/145% 'Trebuchet MS',helvetica,arial,verdana;
 		color: #333;
 		margin: 0 auto;
+
+
+}
+
+#t_consulta tr{
+
+	border-radius: 10px;
+	border-bottom: 1px solid #BDBDBD;
+
+	
+}
+
+#t_consulta td{
+
+	border-radius: 5px 5px 0 0;
+	text-align: center;
 
 
 }
