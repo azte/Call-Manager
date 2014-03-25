@@ -200,6 +200,11 @@ span{
 }
 
 
-td.t_encabezado{
+#encabezado_consulta{
+
+	background-color:#BDBDBD;	
+	color: white;
+	font-weight:bold;
+	text-align: center;
 	
 }

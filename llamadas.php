@@ -20,6 +20,11 @@
 	<script src="scripts/f_subtipos.js" language="javascript" type="text/javascript"></script>
 	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
 <body>
+<style type="text/css">
+ body{background-image:url('images/background.jpg');
+}
+</style>	
+
 <div id="contenido">
 <header>
 	<h1>CAPTURA DE LLAMADAS</h1>
@@ -33,10 +38,10 @@
 	
 		<table class="t_datos">
 			<tr>
-				<td>Fecha:</td><td><input id="date" type="text"></td>
+				<td>Fecha:</td><td><input id="date" type="text" disabled></td>
 			</tr>
 			<tr>
-				<td>Nombre del Agente:</td><td><input value="<?php echo $_SESSION[usuarioactual]?>" type="text"></td>
+				<td>Nombre del Agente:</td><td><input value="<?php echo $_SESSION[usuarioactual]?>" type="text" disabled></td>
 			</tr>
 			</tr>
 		</table>
@@ -50,7 +55,7 @@
 	
 	include_once "conexion.php";
 	session_start();
-	echo "Bienvenido ".$_SESSION["usuarioactual"].", dios te bendiga";
+	echo "Bienvenid@ ".$_SESSION["usuarioactual"].", dios te bendiga";
 	 if ($_POST['CerrarSesion']) 
 		{
 		session_destroy();
@@ -113,7 +118,8 @@
 <script type="text/javascript">
 
 	var f = new Date();
-	document.getElementById('date').value=f.getFullYear()+"-"+f.getMonth()+"-"+f.getDate();
+
+	document.getElementById('date').value=f.getFullYear()+"-"+(f.getMonth()+1)+"-"+f.getDate();
 
 
 </script>
