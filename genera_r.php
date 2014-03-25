@@ -18,8 +18,25 @@ $idr=mysql_query($consulta);
 $resEmp = mysql_fetch_assoc($idr);
    //echo $resEmp['idu']."<br>";
 
+$tiendaquery="SELECT det from datos where det='$_POST[tienda]'";
+$resultadotienda=mysql_query($tiendaquery); 
+$tienda=mysql_fetch_assoc($resultadotienda);
+
+if (($tienda['det'])!=($_POST['tienda'])) 
+{ 
+
+echo "LA TIENDA "."<strong>"."$_POST[tienda]"."</strong>"." NO EXISTE, REVISA EL DIRECTORIO.".mysql_error(); 
+exit();
+
+}
+
+else{
+
+}
+
 date_default_timezone_set("America/Mexico_City");
 $fecha=date("y/m/d");
+
 $query = "INSERT INTO reportes(id_u,usuario,tienda,comentarios,ticket,tipo,subtipo,fecha) values('$resEmp[idu]','$_POST[usuario]','$_POST[tienda]',
 	'$_POST[comentarios]','$_POST[ticket]','$_POST[tipo]','$_POST[subtipo]','$fecha')";
 $result = mysql_query($query);

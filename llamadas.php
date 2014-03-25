@@ -55,7 +55,7 @@
 	
 	include_once "conexion.php";
 	session_start();
-	echo "Bienvenid@ ".$_SESSION["usuarioactual"].", dios te bendiga";
+	echo "Bienvenid@ "."<strong>".$_SESSION["usuarioactual"]."</strong>".", TRABAJA!";
 	 if ($_POST['CerrarSesion']) 
 		{
 		session_destroy();

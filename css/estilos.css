@@ -92,15 +92,17 @@ figure{
 
 	
 	display: inline-block;
-	height: 80px;
+	height: 83px;
 	margin:0;
 	vertical-align: top; 
-	width: 80px;
+	width: 83px;
 
 }
 
 figure img{
-   width:80px;
+   border-radius: 5px;
+   width:83px;
+
 }
 
 form{
@@ -150,6 +152,7 @@ section{
 }
 
 span{
+   font-weight: bold;
    display: block;
    margin: 20px 0 20px 0;
 }
