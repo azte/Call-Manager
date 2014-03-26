@@ -98,6 +98,14 @@ h2{
 
 }
 
+#liston {
+position: fixed;
+top: 0;
+right: 0;
+z-index: 10000;
+
+}
+
 #login_formulario{
 
 	
@@ -109,17 +117,25 @@ h2{
 #logo_tiba,#logo_issste{
 
 	
+	border-radius: 10px;
 	display: inline-block;
 	height: 150px;
 	margin: 0;
 	width: 200px;
 
 }
+#logo_tiba{
+
+	margin-right: 3px;
+}
 
 
 #logo_tiba img{
 
-	width: 200px;
+	border: solid black;
+	border-radius: 10px;
+	margin-right: 2px;
+	width: 195px;
 	height: 150px;
 	display: inline-block;
 
@@ -128,8 +144,10 @@ h2{
 
 #logo_issste img{
 
+	border: solid gray;
+	border-radius: 10px;
 	height: 150px;
-	width: 215px;
+	width: 210px;
 	
 
 }

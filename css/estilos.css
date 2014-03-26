@@ -73,6 +73,13 @@ body{
 	padding: 10px;
 }
 
+#consulta_tienda{
+
+	border:solid gray;
+	margin: 0 auto;
+	width: 1010px;
+}
+
 #encabezado_consulta{
 
 	font-weight: bold;
@@ -182,7 +189,7 @@ span{
 
 #t_consulta tr{
 
-	border-radius: 10px;
+	border-radius: 5px;
 	border-bottom: 1px solid #BDBDBD;
 
 	
@@ -210,8 +217,7 @@ span{
    
    
    background: #D9D9D9;
-   
-   border-radius: 5px;
+ 	border-radius: 5px;
    margin: 0 auto;
    padding: 10px;
    width: 800px;

@@ -23,6 +23,7 @@
 <body>
 <style type="text/css">
  body{background-image:url('images/background.jpg');
+
 }
 </style>	
 
@@ -87,13 +88,13 @@
 		mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); //BD PRUEBAS
 
 // Realizar una consulta MySQL
-		$query = "SELECT idr,usuario,tienda,comentarios,ticket,reportes.tipo,subtipo,fecha from reportes,usuarios where fecha=curdate() and idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY
+		$query = "SELECT idr,usuario,tienda,comentarios,ticket,reportes.tipo,subtipo,fecha,hora from reportes,usuarios where fecha=curdate() and idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY
 		$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 
 // Imprimir los resultados en HTML
 
 		echo "<table id=t_consulta>\n";
-		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td></tr>";
+		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td><td width=90>Hora</td></tr>";
 			
 		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD
 
@@ -132,7 +133,7 @@
 			<tr>
 
 				<td class="t_encabezado">Usuario</td>
-				<td class="t_encabezado" size="50">Tienda/Depto/Corp</td>
+				<td class="t_encabezado" size="50">Tienda | Corp</td>
 				<td class="t_encabezado">Comentarios</td>
 				<td class="t_encabezado">Ticket</td> <!--ENCABEZADO DE TICKET-->
 				<td class="t_encabezado">Tipo de Llamada</td>
@@ -182,6 +183,8 @@
 		</table>
 	</form>
 </section>
+
+	
 
 
 <!--SCRIPT MANIPULAR TIPO Y SUBTIPO DE LLAMADAS-->

@@ -9,13 +9,13 @@
 		return false;
 	}
 
-		else if( isNaN(tienda) || tienda=="" || tienda.length>3) {
+		if( isNaN(tienda) || tienda=="" || tienda.length>3) {
 			alert("Hey, escribe una tienda que exista");	
   		return false;
 		}
 
 		tipo = document.getElementById("tipo").selectedIndex;
-	if( tipo == null || tipo == 0 ) {
+		if( tipo == null || tipo == 0 ) {
   		
   		alert("Selecciona un tipo de llamada");	
 
