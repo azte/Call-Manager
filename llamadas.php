@@ -17,6 +17,7 @@
 	<meta cahrset="utf-8">
 	<title>CAPTURA DE LLAMADAS</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<script src="scripts/f_subtipos.js" language="javascript" type="text/javascript"></script>
 	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
 	<link rel="icon" type="image/png" href="images/favicon.ico" />
@@ -78,7 +79,7 @@
 <!------------------SECCIÓN QUE MUESTRA LOS REPORTES DE BASE DE DATOS-------------->	
 	<div id="reportes">
 	
-		<span>Reportes</span>
+		
 
 		<?php
 // Conectando, seleccionando la base de datos
@@ -86,6 +87,15 @@
     	or die('No se pudo conectar: ' . mysql_error());
 
 		mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); //BD PRUEBAS
+
+
+//Cuantos reportes llevas
+
+		$querycontar="SELECT count(idr) as reportes,usuario,tienda,comentarios,ticket,reportes.tipo,subtipo,fecha,hora from reportes,usuarios where fecha=curdate() and idu=id_u and nombre='$_SESSION[usuarioactual]'";
+		$rtotal=mysql_query($querycontar);
+		$reportes = mysql_fetch_assoc($rtotal);
+
+		echo "<span>"."Reportes: ".$reportes['reportes']."</span>";
 
 // Realizar una consulta MySQL
 		$query = "SELECT idr,usuario,tienda,comentarios,ticket,reportes.tipo,subtipo,fecha,hora from reportes,usuarios where fecha=curdate() and idu=id_u and nombre='$_SESSION[usuarioactual]'"; //TABLA SELECCIONADA Y QUERY

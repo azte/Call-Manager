@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="css/log_estilos.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="icon" type="image/png" href="images/favicon.ico" />
 
 </head>
