@@ -3,6 +3,7 @@
 
 	background: white;
 	border-radius: 10px;
+	border-style:outset;
 	display: block;
 	margin: 0 auto;
 	padding: 10px;
@@ -11,7 +12,7 @@
 
 body{
 
-	background: #585858;
+	background: black;
 	color:#585858;
 	font-family: arial;
 	padding-top: 30px;
@@ -73,6 +74,10 @@ body{
 	width: 150px;
 	
 }
+#it{
+
+	color:orange;
+}
 
 
 
@@ -80,7 +85,7 @@ h1{
 	
 	
 	color: ;
-	font-size: 20px;
+	font-size: 18px;
 	height: 30px;
 	margin: 10px auto;
 	text-align: center;
@@ -154,9 +159,20 @@ z-index: 10000;
 
 footer{
 
-	color: white;
-	display: block;
-	margin: 0 auto;
-	text-align: center;
 	
+	background: white;
+	border-radius: 10px;
+	border-style:outset;
+	color: gray;
+	display: block;
+	height: 50px;
+	margin: 5px auto;
+	padding-top: 10px;
+	text-align: center;
+	width: 440px;
+	
+}
+
+footer p{
+	margin: 0;
 }

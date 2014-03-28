@@ -65,11 +65,11 @@ body{
 #contenido{
 	
 	background: #F2F2F2;
-
-    width: 1200px;
+width: 1200px;
     border-style:outset;
 	border-radius: 10px;
 	border-width:3px;
+	margin: 0 auto;
 	padding: 10px;
 }
 
@@ -111,6 +111,7 @@ figure img{
    width:83px;
 
 }
+
 
 form{
 

@@ -22,6 +22,7 @@
 	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
 	<link rel="icon" type="image/png" href="images/favicon.ico" />
 <body>
+<div class="wrapper">
 <style type="text/css">
  body{background-image:url('images/background.jpg');
 
@@ -58,7 +59,7 @@
 	
 	include_once "conexion.php";
 	session_start();
-	echo "Bienvenid@ "."<strong>".$_SESSION["usuarioactual"]."</strong>".", TRABAJA!";
+	echo "Bienvenid@ "."<strong>".$_SESSION["usuarioactual"]."</strong>";
 	 if ($_POST['CerrarSesion']) 
 		{
 		session_destroy();
@@ -194,10 +195,12 @@
 	</form>
 </section>
 
-	
+
 
 
 <!--SCRIPT MANIPULAR TIPO Y SUBTIPO DE LLAMADAS-->
 </div>
+</div>
+
 </body>	
 </html>	

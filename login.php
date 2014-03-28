@@ -9,14 +9,18 @@
 
 </head>
 <body>
-	<div id="liston" >
-<img alt="" src="images/ribbon.png" width="170" height="170" /></div>
+<style type="text/css">
+ body{background-image:url('images/bkg_login.jpg');
+}
+</style>	
+<div class="wrapper">
+	
 
 	
 <div id="all">
 
 
-	<h1>Control de Llamadas</h1>
+	<h1>CONTROL DE LLAMADAS</h1>
 	<figure id="logo_tiba">
 		<img src="images/logo_tiba.jpg">
 	</figure>
@@ -36,9 +40,11 @@
 		</form>
 	</div>
 </div>	
+</div>
 
 <footer>
-
+<p>TIBA <strong id="it">IT </strong> 2014 | Derechos Reservados</p>
+<p>Contacto: cuellar.carlos@tibaitservices.com</p>
 </footer>
 </body>
 
