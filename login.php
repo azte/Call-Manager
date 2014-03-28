@@ -10,7 +10,7 @@
 </head>
 <body>
 <style type="text/css">
- body{background-image:url('images/bkg_login.jpg');
+ body{background-image:url('images/bkg_login3.jpg');
 }
 </style>	
 <div class="wrapper">
