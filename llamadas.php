@@ -18,6 +18,7 @@
 	<title>CAPTURA DE LLAMADAS</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'>
 	<script src="scripts/f_subtipos.js" language="javascript" type="text/javascript"></script>
 	<script src="scripts/validar.js" language="javascript" type="text/javascript"></script>
 	<link rel="icon" type="image/png" href="images/favicon.ico" />
@@ -84,7 +85,7 @@
 
 		<?php
 // Conectando, seleccionando la base de datos
-		$link = mysql_connect('localhost', 'root', '')
+		$link = mysql_connect('localhost', 'root', '*mayuda01*')
     	or die('No se pudo conectar: ' . mysql_error());
 
 		mysql_select_db('prueba') or die('No se pudo seleccionar la base de datos'); //BD PRUEBAS
@@ -105,7 +106,7 @@
 // Imprimir los resultados en HTML
 
 		echo "<table id=t_consulta>\n";
-		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td><td width=90>Hora</td></tr>";
+		echo "<tr id=encabezado_consulta><td>Reporte</td><td>Usuario</td><td>Tienda</td><td>Comentarios</td><td width=60>Ticket</td><td>Tipo</td><td>Subtipo</td><td width=90>Fecha</td><td width=90>Hora</td></tr>";
 			
 		//Mientras existe un renglon de resultados, va generar un renglon de tabla y lo separa con TD
 
